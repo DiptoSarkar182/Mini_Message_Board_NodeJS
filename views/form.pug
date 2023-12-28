@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  form(method='POST' action="/new")
+    div.form-group
+      label(for='authors_name') Authors Name:
+      input#authors_name.form-control(type='text', placeholder='Authors name (Christian)' name='authors_name' required )
+      label(for='message') Message:
+      input#message.form-control(type='text',  name='message' required )
+    button.btn.btn-primary(type='submit') Submit
